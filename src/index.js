@@ -17,5 +17,5 @@ app.get("/api/v1/users", (req,res) => {
 });
 
 app.listen(5001, () => {
-  console.log("App listening on port 5001!");
+  console.log("App listening on port 6543!");
 })

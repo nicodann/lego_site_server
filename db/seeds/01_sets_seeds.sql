@@ -1,32 +1,29 @@
- INSERT INTO sets (url, number, name, category) VALUES ()
-
-
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6954/Renegade`, 6954, `Renegade`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6812/Grid_Trekker`, 6812, `Grid Trekker`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6986/Mission_Commander`, 6986, `Mission Commander`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/m/lego_instructions/set/6783/Sonar_Transmitting_Cruiser`, 6783, `Sonar Transmitting Cruiser`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6825/Cosmic_Comet`, 6825, Cosmic Comet, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6926/Mobile_Recovery_Vehicle`, 6926, Mobile Recovery Vehicle, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6941/Battrax`, 6941, `Battrax`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6955/Space_LockUp_Isolation_Base`	, 6955, `Space Lock-Up Isolation Base`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6834/Celestial_Sled`, 6834, `Celestial Sled`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6897/Rebel_Hunter`, 6897, `Rebel Hunter`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6832/Super_Nova_2`, 6832, `Super Nova 2`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6956/Stellar_Recon_Voyager`, 6956, `Stellar Recon Voyager`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6931/FXStar_Patroller`	, 6931, `FX-Star Patroller`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6850/Auxiliary_Patroller`, 6850, `Auxiliary Patroller`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6886/Galactic_Peace_Keeper`, 6886, `Galactic Peace Keeper`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6987/Message_Intercept_Base`, 6987, `Message Intercept Base`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/1499/Twin_Starfire`, 1499, `Twin Starfire`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6898/Icesat_V`	, 6898, `Ice-sat V`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6940/Alien_Moon_Stalker`, 6940, `Alien Moon Stalker`, `Space`);
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6833/Beacon_Tracer`, 6833, `Beacon Tracer`, `Space`);
-INSERT INTO sets (`https://letsbuilditagain.com/instructions/6877/`, 6877, `Vector Detector - M Tron`, `Space`);
-INSERT INTO sets (`https://www.toysperiod.com/lego-set-reference/castle/black-knights/lego-6086-black-knights-castle/`, 6086, `Black Knight's Castle`, `Castle`);
-INSERT INTO sets (`https://www.lego.com/cdn/product-assets/product.bi.core`.pdf/4128767.pdf, 'Guarded Treasury Lion shield');
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6038/Wolfpack_Renegades`, 6038, `Wolfpack Renegades`, 'Castle');
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6057/Sea_Serpent`, 6057, `Sea Serpent`, 'Castle');
-INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6018/Battle_Dragon`, 6018, `Battle Dragon`, 'Castle');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6954/Renegade', 6954, 'Renegade', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6812/Grid_Trekker', 6812, 'Grid Trekker', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6986/Mission_Commander', 6986, 'Mission Commander', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/m/lego_instructions/set/6783/Sonar_Transmitting_Cruiser', 6783, 'Sonar Transmitting Cruiser', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6825/Cosmic_Comet', 6825, 'Cosmic Comet', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6926/Mobile_Recovery_Vehicle', 6926, 'Mobile Recovery Vehicle', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6941/Battrax', 6941, 'Battrax', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6955/Space_LockUp_Isolation_Base'	, 6955, 'Space Lock-Up Isolation Base', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6834/Celestial_Sled', 6834, 'Celestial Sled', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6897/Rebel_Hunter', 6897, 'Rebel Hunter', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6832/Super_Nova_2', 6832, 'Super Nova 2', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6956/Stellar_Recon_Voyager', 6956, 'Stellar Recon Voyager', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6931/FXStar_Patroller'	, 6931, 'FX-Star Patroller', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6850/Auxiliary_Patroller', 6850, 'Auxiliary Patroller', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6886/Galactic_Peace_Keeper', 6886, 'Galactic Peace Keeper', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6987/Message_Intercept_Base', 6987, 'Message Intercept Base', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/1499/Twin_Starfire', 1499, 'Twin Starfire', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6898/Icesat_V'	, 6898, 'Ice-sat V', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6940/Alien_Moon_Stalker', 6940, 'Alien Moon Stalker', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6833/Beacon_Tracer', 6833, 'Beacon Tracer', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://letsbuilditagain.com/instructions/6877/', 6877, 'Vector Detector - M Tron', 'Space');
+INSERT INTO sets (url, number, name, category) VALUES ('https://www.toysperiod.com/lego-set-reference/castle/black-knights/lego-6086-black-knights-castle/', 6086, 'Black Knight&#39s Castle', 'Castle');
+-- INSERT INTO sets (url, number, name, category) VALUES ('https://www.lego.com/cdn/product-assets/product.bi.core.pdf/4128767.pdf', 'Guarded Treasury Lion shield');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6038/Wolfpack_Renegades', 6038, 'Wolfpack Renegades', 'Castle');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6057/Sea_Serpent', 6057, 'Sea Serpent', 'Castle');
+INSERT INTO sets (url, number, name, category) VALUES ('https://lego.brickinstructions.com/en/lego_instructions/set/6018/Battle_Dragon', 6018, 'Battle Dragon', 'Castle');
 -- INSERT INTO sets (https://www.toysperiod.com/download.php?file=h4d4k5w544a4h4n4x5v5s444t4r5n4t5k424h4m45494s5l4n21324z2y234o203c454t2w2q213.pdf	'Castle';
 -- INSERT INTO sets (https://www.bricklink.com/v2/catalog/catalogitem.page?S=4606-1#T=S&O=%7B%22iconly%22:0%7D	BrickLink - Set 4606-1 : Lego Aqua Res-Q Transport [4 Juniors:Jack Stone:Traffic] - BrickLink Reference Catalog;
 -- INSERT INTO sets (https://www.lego.com/ms-my/service/buildinginstructions/8370	Nitro Stunt Bike 8370 - ,® Racers - Building - Customer Service - ,.com MY;
@@ -63,4 +60,4 @@ INSERT INTO sets (`https://lego.brickinstructions.com/en/lego_instructions/set/6
 -- INSERT INTO sets (https://lego.brickinstructions.com/en/lego_instructions/set/6285/Black_Seas_Barracuda	, 6285 Black Seas Barracuda, Pirates;
 -- INSERT INTO sets (https://www.lego.com/cdn/product-assets/product.bi.core.pdf/6341424.pdf	New Moon Rover 3 in 1;
 -- INSERT INTO sets (https://lego.brickinstructions.com/en/lego_instructions/set/7411/_Tygurah's_Roar_	, 7411 Tygurah's Roar, Adventurers;
--- INSERT INTO sets (https://lego.brickinstructions.com/en/lego_instructions/set/2152/_Robo_Raptor_	, 2152 Robo Raptor, `Space`
+-- INSERT INTO sets (https://lego.brickinstructions.com/en/lego_instructions/set/2152/_Robo_Raptor_	, 2152 Robo Raptor, 'Space'

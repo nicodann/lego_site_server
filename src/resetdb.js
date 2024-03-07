@@ -1,17 +1,19 @@
 import fs from 'fs'
-// import * as pg from 'pg'
+import pg from 'pg'
 import dbparams from '../lib/db.js'
 import dbParams from '../lib/db.js'
+import chalk from 'chalk'
 
-// const { Client } = pg
+const { Client } = pg
 const db = new Client(dbparams)
 
 const runSchemaFiles = async () => {
   console.log(chalk.cyan('--> Loading Schema Files ...'));
-  const schemaFilenames = fs.readdirSync("../db/schema");
+  const schemaFilenames = fs.readdirSync("db/schema");
+  
 
   for (const filename of schemaFilenames) {
-    const sql = fs.readFileSync(`../db/schema/${filename}`, "utf8");
+    const sql = fs.readFileSync(`db/schema/${filename}`, "utf8");
     console.log(`\t-> running ${chalk.green(filename)}`);
     await db.query(sql)
   }
@@ -19,10 +21,10 @@ const runSchemaFiles = async () => {
 
 const runSeedFiles = async () => {
   console.log(chalk.cyan('--> Loading Seed Files ...'));
-  const seedFilenames = fs.readdirSync("../db/seeds");
+  const seedFilenames = fs.readdirSync("db/seeds");
 
   for (const filename of seedFilenames) {
-    const sql = fs.readFileSync(`../db/seeds/${filename}`, "utf8");
+    const sql = fs.readFileSync(`db/seeds/${filename}`, "utf8");
     console.log(`\t-> running ${chalk.green(filename)}`);
     await db.query(sql)
   }

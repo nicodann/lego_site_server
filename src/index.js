@@ -7,6 +7,10 @@ const app = express();
 app.use(cors());
 app.use(morgan("dev"))
 
+app.get("/", (req,res) => {
+  return res.status(200).json("connected")
+})
+
 app.get("/api/v1/users", (req,res) => {
   const users = [
     {id:1, name: "John Doe" },
@@ -17,5 +21,5 @@ app.get("/api/v1/users", (req,res) => {
 });
 
 app.listen(5001, () => {
-  console.log("App listening on port 6543!");
+  console.log("App listening on port 5001!");
 })

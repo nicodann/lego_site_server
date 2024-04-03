@@ -1,8 +1,16 @@
 import express from "express";
 import cors from "cors";
 import morgan from "morgan";
+import 'dotenv/config'
+import pg from 'pg'
+import dbParams from "../lib/db.js";
+import setsDb from "../db/setsDb.js";
 
 const app = express();
+const { Pool } = pg
+const pool = new Pool(dbParams)
+pool.connect()
+const dbSets = setsDb(pool)
 
 app.use(cors());
 app.use(morgan("dev"))

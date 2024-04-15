@@ -9,6 +9,15 @@ export default (dbSets) => {
     dbSets.getSets()
       .then(sets => res.send( sets ))
       .catch(err => res.status(500).json({ error: err.message }))
+  });
+
+  router.get('/:id', (req,res) => {
+    const { id } = req.params;
+    let set;
+    dbSets.getSet(id)
+      .then(result => set = result)
+      .then(() => res.json({ set }))
+      .catch(err => res.status(500).json({ error:err }))
   })
 
   return router

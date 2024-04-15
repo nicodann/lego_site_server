@@ -20,8 +20,22 @@ export default (pool) => {
       .catch(error => console.error(error.message))
   }
 
+  const getSet = (id) => {
+    const queryString = `
+    SELECT sets.*
+    FROM sets
+    WHERE sets.id = $1
+    `;
+    const queryParams = [id];
+    return pool
+      .query(queryString, queryParams)
+      .then(data => data.rows[0])
+      .catch(error => console.error(error.message))
+  }
+
   return {
-    getSets
+    getSets,
+    getSet
   }
 
 }

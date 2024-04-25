@@ -6,6 +6,7 @@ import pg from 'pg'
 import dbParams from "../lib/db.js";
 import setsDb from "../db/setsDb.js";
 import setsRoutes from "../routes/setsRoutes.js"
+import getImageHrefs from "../lib/getImageHrefs.js";
 
 const app = express();
 const { Pool } = pg
@@ -25,14 +26,29 @@ app.get("/", (req,res) => {
   return res.status(200).json("connected")
 })
 
-app.get("/api/v1/users", (req,res) => {
-  const users = [
-    {id:1, name: "John Doe" },
-    {id: 2, name: "Jane Doe" },
-  ];
+app.get('/images', async (req,res) => {
+  const url = req.query.url;
+  if (!url) {
+    return res.status(400).json({ error: 'URL parameter is required.' })
+  }
 
-  return res.status(200).json({ users });
-});
+  try {
+    const imageHrefs = await getImageHrefs(url);
+    res.json({ images: imageHrefs});
+
+  } catch (error) {
+    res.status(500).json({ error: error.message })
+  }
+})
+
+// app.get("/api/v1/users", (req,res) => {
+//   const users = [
+//     {id:1, name: "John Doe" },
+//     {id: 2, name: "Jane Doe" },
+//   ];
+
+//   return res.status(200).json({ users });
+// });
 
 app.listen(5001, () => {
   console.log("App listening on port 5001!");

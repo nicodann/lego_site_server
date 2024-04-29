@@ -16,7 +16,10 @@ export default (pool) => {
     const queryParams = limit ? [limit] : []
     return pool
       .query(queryString, queryParams)
-      .then(data => data.rows)
+      .then(data => {
+        console.log("DATA:",data.rows)
+        return data.rows
+      })
       .catch(error => console.error(error.message))
   }
 

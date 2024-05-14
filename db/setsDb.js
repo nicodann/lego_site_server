@@ -59,14 +59,50 @@ export default (pool) => {
 
     if (number) {
       queryParams.push(number)
-      queryString += `SET number = $${quaeryParams.length}`
+      queryString += `SET number = $${queryParams.length}`
     }
-    if (name) {}
+    if (name) {
+      if (queryParams.length === 1) {
+        queryString += `, `;
+      } else {
+        queryString += `SET`
+      }
+      queryParams.push(name);
+      queryString += `name = $${queryParams.length}`;
+    }
+    if (url) {
+      if (queryParams.length === 1) {
+        queryString += `, `;
+      } else {
+        queryString += `SET`
+      }
+      queryParams.push(url)
+      queryString += `url = $${queryParams.length}`
+    }
+    if (category) {
+      if (queryParams.length === 1) {
+        queryString += `, `;
+      } else {
+        queryString += `SET`
+      }
+      queryParams.push(category)
+      queryString += `category = $${queryParams.length}`
+    }
+    if (image_url) {
+      if (queryParams.length === 1) {
+        queryString += `, `;
+      } else {
+        queryString += `SET`
+      }
+      queryParams.push(image_url)
+      queryString += `image_url = $${queryParams.length}`
+    }
   }
 
   return {
     getSets,
-    getSet
+    getSet, 
+    editSet
   }
 
 }

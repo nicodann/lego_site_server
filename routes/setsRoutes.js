@@ -1,4 +1,5 @@
 import express from "express";
+import setsDb from "../db/setsDb";
 const router = express.Router();
 
 export default (dbSets) => {
@@ -19,6 +20,16 @@ export default (dbSets) => {
       .then(result => set = result)
       .then(() => res.json({ set }))
       .catch(err => res.status(500).json({ error:err }))
+  })
+
+  //EDIT SET
+  router.put('/:id', (req, res) => {
+    const { id } = req.params
+    const { number, name, url, category, image_url } = req.body
+
+    setsDb.editSet(number, name, url, category, image_url, id)
+      .then(set => res.json({ set }))
+      .catch(err => res.status(500).json({ error: err.message }))
   })
 
   return router

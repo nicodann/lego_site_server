@@ -3,17 +3,17 @@ import cors from "cors";
 import morgan from "morgan";
 import 'dotenv/config'
 import pg from 'pg'
-import dbParams from "../lib/db.js";
-import setsDb from "../db/setsDb.js";
-import setsRoutes from "../routes/setsRoutes.js"
-import getImageHrefs from "../lib/getImageHrefs.js";
+import dbParams from "./lib/db.js";
+import setsDb from "./db/setsDb.js";
+import setsRoutes from "./routes/setsRoutes.js"
+import getImageHrefs from "./lib/getImageHrefs.js";
 
 const app = express();
 const { Pool } = pg
 const pool = new Pool(dbParams)
 pool.connect()
 const dbSets = setsDb(pool)
-const router = express.Router()
+// const router = express.Router()
 
 app.use(cors());
 app.use(express.static("public"))
@@ -22,7 +22,7 @@ app.use(express.json())
 
 app.use("/api/sets", setsRoutes(dbSets))
 
-app.get("/", (req,res) => {
+app.get("/", (_req, res) => {
   return res.status(200).json("connected")
 })
 

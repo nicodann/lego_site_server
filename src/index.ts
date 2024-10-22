@@ -23,22 +23,29 @@ app.use(express.json())
 app.use("/api/sets", setsRoutes(dbSets))
 
 app.get("/", (_req, res) => {
-  return res.status(200).json("connected")
+  res.status(200).json("connected")
 })
 
 app.get('/images', async (req,res) => {
   const url = req.query.url;
   if (!url) {
-    return res.status(400).json({ error: 'URL parameter is required.' })
+    res.status(400).json({ error: 'URL parameter is required.' })
   }
 
-  try {
-    const imageHrefs = await getImageHrefs(url);
-    res.json({ images: imageHrefs});
-
-  } catch (error) {
-    res.status(500).json({ error: error.message })
+  if (typeof url === 'string') {
+    try {
+      const imageHrefs = await getImageHrefs(url);
+      res.json({ images: imageHrefs});
+  
+    } catch (error) {
+      if (error instanceof Error) {
+        res.status(500).json({ error: error.message })
+      }
+    }
+  } else {
+    console.error('The queried URL is not a string.')
   }
+
 })
 
 // app.get("/api/v1/users", (req,res) => {

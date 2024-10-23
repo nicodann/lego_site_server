@@ -13,7 +13,6 @@ const { Pool } = pg
 const pool = new Pool(dbParams)
 pool.connect()
 const dbSets = setsDb(pool)
-// const router = express.Router()
 
 app.use(cors());
 app.use(express.static("public"))

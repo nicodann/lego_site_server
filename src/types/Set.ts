@@ -6,3 +6,7 @@ export type Set = {
   image_url: string,
   id: number
 }
+
+interface SetNoId extends Omit<Set, 'id'> {}
+
+export type {SetNoId as SetNoIdType}

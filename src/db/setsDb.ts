@@ -1,9 +1,11 @@
 import { Pool } from "pg"
-import { Set } from "../types/Set"
+import { Set, SetNoIdType } from "../types/Set"
+
+
 
 export default (pool: Pool) => {
   // GET SETS
-  const getSets = (limit: number) => {
+  const getSets = async(limit: number) => {
     const queryString = limit 
     ? `
       SELECT sets.*
@@ -27,7 +29,7 @@ export default (pool: Pool) => {
   }
 
   // GET SET BY ID
-  const getSet = (id: number) => {
+  const getSet = async(id: string) => {
     const queryString = `
     SELECT sets.*
     FROM sets
@@ -41,9 +43,9 @@ export default (pool: Pool) => {
   }
 
   // POST SET
-  interface SetNoId extends Omit<Set, 'id'> {}
+  // interface SetNoId extends Omit<Set, 'id'> {}
 
-  const postSet = (setNoId: SetNoId) => {
+  const postSet = async(setNoId: SetNoIdType) => {
     const {
       number, 
       name,
@@ -64,16 +66,9 @@ export default (pool: Pool) => {
       .catch(error => console.error(error.message));
   }
 
-  // EDIT/UPDATE SET
-  const editSet = ( set:Set ) => {
-    const {
-    number, 
-    name, 
-    url, 
-    category, 
-    image_url, 
-    id
-  } = set;
+    // EDIT/UPDATE SET
+  const editSet = async({id, number, name, url, category, image_url}: Set
+  ) => {
 
     let queryString = `UPDATE sets `
     const queryParams = []
@@ -118,6 +113,12 @@ export default (pool: Pool) => {
       queryParams.push(image_url)
       queryString += `image_url = $${queryParams.length}`
     }
+    queryString += `WHERE id = ${id};`
+
+    return pool
+      .query(queryString, queryParams)
+      .then(data => data.rows[0])
+      .catch(error => console.error(error.message));
   }
 
   return {
@@ -128,5 +129,7 @@ export default (pool: Pool) => {
   }
 
 }
+
+
 
 

@@ -8,14 +8,6 @@ type DbSets = {
   getSets: (limit: number) => Promise<void | any[]>;
   getSet: (id: string) => Promise<any>;
   editSet: (Set: Set) => Promise<any>;
-  // editSet: (
-  //   id?: number,
-  //   number?: number, 
-  //   name?: string, 
-  //   url?: string, 
-  //   category?: string, 
-  //   image_url?: string, 
-  // ) => Promise<any>;
   postSet: (setNoId: SetNoIdType) => Promise<any>;
 }
 

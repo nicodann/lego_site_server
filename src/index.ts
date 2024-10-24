@@ -22,7 +22,7 @@ app.use(express.json())
 app.use("/api/sets", setsRoutes(dbSets))
 
 app.get("/", (_req, res) => {
-  res.status(200).json("connected")
+  res.status(200).json("Welcome to the Lego Site API!")
 })
 
 app.get('/images', async (req,res) => {
